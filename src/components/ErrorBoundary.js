@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const ErrorBoundary = () => {
+const ErrorBoundary = (props) => {
   const [error, setError] = React.useState(null);
 
   // class ErrorBoundary extends Component {
