@@ -6,6 +6,11 @@ const ErrorBoundary = (props) => {
   if (error) {
     throw error;
   }
+
+  React.useEffect(() => {
+    load().catch((err) => setError(err));
+  }, []);
+
   return props.children;
 };
 
